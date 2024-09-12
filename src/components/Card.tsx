@@ -3,15 +3,15 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 
 type Props = {
-  imageUrl: string
+  imageSource: number
   title: string
 }
 
-const Card = ({ imageUrl, title }: Props) => {
+const Card = ({ imageSource, title }: Props) => {
   return (
     <View className="w-full p-2 mb-2 rounded-2xl bg-coolgray100 flex-row justify-between items-center">
       <View className="flex-row items-center space-x-4 flex-1">
-        <Image source={{ uri: imageUrl }} className="w-12 h-12 rounded-lg" />
+        <Image source={imageSource} className="w-24 h-24 rounded-lg" />
         <View className="flex-1">
           <Text className="text-base font-semibold text-gray-800">{title}</Text>
         </View>

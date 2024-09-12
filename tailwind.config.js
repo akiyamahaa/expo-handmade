@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         primary: '#FFA310',
         coolgray100: '#F3F4F6',
+        primary700: '#71BEF2',
+        'text-liked': '#f66',
       },
       fontFamily: {
         pthin: ['Poppins-Thin', 'sans-serif'],

@@ -1,21 +1,19 @@
+import Favourite from '@/screens/Favourite'
 import Formula from '@/screens/Formula'
 import FormulaDetail from '@/screens/FormulaDetail'
 import Home from '@/screens/Home'
-import SplashScreen from '@/screens/SplashScreen'
 import Sample from '@/screens/Sample'
-import Tool from '@/screens/Tool'
-import ToolDetail from '@/screens/ToolDetail'
 import Trick from '@/screens/Trick'
 import TrickDetail from '@/screens/TrickDetail'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 export type RootStackParamList = {
-  SplashScreen: undefined
   Home: undefined
   Formula: undefined
-  Tool: undefined
-  ToolDetail: undefined
-  FormulaDetail: undefined
+  Favourite: undefined
+  FormulaDetail: {
+    dataId: string
+  }
   Trick: undefined
   TrickDetail: undefined
   Sample: undefined
@@ -30,21 +28,14 @@ export default function RootStack() {
         options={{
           headerShown: false,
         }}
-        name="SplashScreen"
-        component={SplashScreen}
-      />
-      <Stack.Screen
-        options={{
-          headerShown: false,
-        }}
         name="Home"
         component={Home}
       />
       <Stack.Screen
         options={{
-          title: 'Công thức',
+          title: 'Các loại vòng',
           headerStyle: {
-            backgroundColor: '#EFC7FF',
+            backgroundColor: '#9DD6FC',
           },
           headerTintColor: '#1F2937',
           headerTitleStyle: {
@@ -57,9 +48,9 @@ export default function RootStack() {
       />
       <Stack.Screen
         options={{
-          title: 'Công thức',
+          title: 'Các loại vòng',
           headerStyle: {
-            backgroundColor: '#EFC7FF',
+            backgroundColor: '#9DD6FC',
           },
           headerTintColor: '#1F2937',
           headerTitleStyle: {
@@ -72,7 +63,7 @@ export default function RootStack() {
       />
       <Stack.Screen
         options={{
-          title: 'Dụng cụ',
+          title: 'Vòng ưa thích',
           headerStyle: {
             backgroundColor: '#C7CCFF',
           },
@@ -82,27 +73,12 @@ export default function RootStack() {
           },
           headerBackTitleVisible: false,
         }}
-        name="Tool"
-        component={Tool}
+        name="Favourite"
+        component={Favourite}
       />
       <Stack.Screen
         options={{
-          title: 'Dụng cụ',
-          headerStyle: {
-            backgroundColor: '#C7CCFF',
-          },
-          headerTintColor: '#1F2937',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-          headerBackTitleVisible: false,
-        }}
-        name="ToolDetail"
-        component={ToolDetail}
-      />
-      <Stack.Screen
-        options={{
-          title: 'Mẹo nhỏ',
+          title: 'Thông tin bổ ích',
           headerStyle: {
             backgroundColor: '#C7E6AF',
           },
@@ -117,7 +93,7 @@ export default function RootStack() {
       />
       <Stack.Screen
         options={{
-          title: 'Mẹo nhỏ',
+          title: 'Thông tin bổ ích',
           headerStyle: {
             backgroundColor: '#C7E6AF',
           },
@@ -143,7 +119,6 @@ export default function RootStack() {
           headerBackTitleVisible: false,
         }}
         name="Sample"
-        
         component={Sample}
       />
     </Stack.Navigator>
