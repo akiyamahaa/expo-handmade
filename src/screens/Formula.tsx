@@ -21,11 +21,11 @@ const Formula = ({ navigation }: Props) => {
                 })
               }
             >
-              <Card title={dataElm.title} imageSource={dataElm.image} />
+              <Card title={dataElm.title} imageSource={dataElm.image} rating={dataElm.rating} />
             </TouchableOpacity>
           ))}
         </View>
-      </View>
+      </View> 
     </View>
   )
 }

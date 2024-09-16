@@ -34,8 +34,6 @@ const Home = ({ navigation }: Props) => {
               <Text className="text-base text-gray-500">Ứng dụng dạy làm vòng thủ công</Text>
               <Text className="text-[48px] text-gray-800">Beads Threads</Text>
             </View>
-            {/* Search bar */}
-            {/* <View></View> */}
             {/* For you */}
             <View className="space-y-4">
               <Text className="text-[20px] font-semibold text-gray-800">Dành cho bạn</Text>

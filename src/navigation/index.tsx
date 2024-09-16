@@ -15,7 +15,9 @@ export type RootStackParamList = {
     dataId: string
   }
   Trick: undefined
-  TrickDetail: undefined
+  TrickDetail: {
+    dataPosition: number
+  }
   Sample: undefined
 }
 

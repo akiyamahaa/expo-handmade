@@ -15,7 +15,6 @@ const Favourite = ({ navigation }: Props) => {
     const getListFavourite = async () => {
       const userData = await loadData()
       const favouritesList = data.filter((obj) => userData[obj.id])
-      console.log('🚀 ~ getListFavourite ~ favouritesList:', favouritesList)
       setListFavourite(favouritesList)
     }
     getListFavourite()
@@ -36,7 +35,7 @@ const Favourite = ({ navigation }: Props) => {
                 })
               }
             >
-              <Card title={data.title} imageSource={data.image} />
+              <Card title={data.title} imageSource={data.image} rating={data.rating} />
             </TouchableOpacity>
           ))}
         </View>
